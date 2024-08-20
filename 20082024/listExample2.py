@@ -7,3 +7,6 @@ while (i<n):
     i=i+1
 
 print(a)
+
+for i in a:
+    print(i)
