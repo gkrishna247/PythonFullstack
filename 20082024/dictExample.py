@@ -1,2 +1,2 @@
-a=["name":"raj","address":"Tgode"]
+a={"name":"raj","address":"Tgode"}
 print(a)
