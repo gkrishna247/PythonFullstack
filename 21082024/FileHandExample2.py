@@ -4,7 +4,7 @@ address=input("Address: ")
 city=input("City: ")
 phone_no=input("PhoneNo: ")
 f=open("21082024/empData1.txt",'w')
-f.write("")
+
 f.write("EmpNo: "+empno)
 f.write("\nEmpName: "+empname)
 f.write("\nAddress: "+address)
