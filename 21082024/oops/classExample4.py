@@ -5,3 +5,4 @@ class maths:
 
 m=maths()
 print(m.access())
+print("m.a= ",m.a)
