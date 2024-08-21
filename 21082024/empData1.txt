@@ -1,0 +1,5 @@
+EmpNo: 101
+EmpName: raja
+Address: tgode
+City: nkal
+PhoneNo: 9876543210
