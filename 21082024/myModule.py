@@ -5,3 +5,7 @@ def factorial(n):
         x=x*i
         i=i+1
     return x
+
+def sumOfNat(n):
+    sum=(n*(n+1))/2
+    return sum
