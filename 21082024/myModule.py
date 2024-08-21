@@ -9,3 +9,9 @@ def factorial(n):
 def sumOfNat(n):
     sum=(n*(n+1))/2
     return sum
+
+def sumOfNFact(z):
+    res=0
+    for i in range(z):
+        res+=factorial(i+1)
+    return res
