@@ -1,7 +1,7 @@
 class a:
     b=10
     def access(self):
-        print(b)
+        print(b) # type: ignore
 
 t=a()
 n=a()
