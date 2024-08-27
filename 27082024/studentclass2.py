@@ -8,3 +8,8 @@ t=[]
 t.append(student())
 t.append(student())
 t.append(student())
+
+for r in t:
+    print("Admission NO: ")
+    print("Name: ")
+    print("Address: ")
