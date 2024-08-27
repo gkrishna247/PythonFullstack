@@ -1,0 +1,1 @@
+#sum of squares of n odd number

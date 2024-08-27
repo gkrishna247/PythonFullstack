@@ -1,0 +1,1 @@
+#check whether the number is odd or even
