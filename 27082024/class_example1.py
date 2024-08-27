@@ -1,0 +1,4 @@
+class a:
+    b=10
+
+print(a.b)         #static class
