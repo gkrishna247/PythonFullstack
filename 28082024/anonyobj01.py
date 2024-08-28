@@ -1,7 +1,7 @@
 #anononymous object
 class student :
-    def __init__(self):
+    def access(self):
         self.a=10
         print(self.a)
 
-student()
+student().access()
