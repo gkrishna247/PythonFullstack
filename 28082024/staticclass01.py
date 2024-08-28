@@ -1,13 +1,18 @@
 class student:
-    a="ksr college of technology"
+    college="ksr college of technology"
     def access(self):
-        self.a="welcome"
+        self.adno=input("Adno: ")
+        self.name=input("Name: ")
 
-print(student.a)
 f=student() #non static object
 m=student()
 
 f.access()
+m.access()
 
-print(f.a)
-print(m.a)
+print("Ad.no: ",f.adno)
+print("Name: ",f.name)
+print("CollegeName: ",f.college)
+print("Ad.no: ",m.adno)
+print("Name: ",m.name)
+print("CollegeName: ",m.college)
