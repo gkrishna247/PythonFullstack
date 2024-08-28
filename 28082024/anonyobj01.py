@@ -4,4 +4,4 @@ class student :
         self.a=10
         print(self.a)
 
-b=student()
+student()
