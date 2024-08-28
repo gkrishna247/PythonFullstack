@@ -4,3 +4,6 @@ class student:
 print(student.a)
 f=student()
 m=student()
+
+print(f.a)
+print(m.a)
