@@ -2,8 +2,8 @@ import mysql.connector
 
 mydb = mysql.connector.connect(host="localhost", user="root", password="", database="dummy")
 
-mycursor = mydb.cursor()
-print(my)
+mycursor = mydb.cursor()\
+
 sql1="select * from ksr"
 mycursor.execute(sql1)
 
