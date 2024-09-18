@@ -1,1 +1,16 @@
-<aside
+<!-- write javascript to find factorial of input number-->
+ <html>
+    <body>
+        <script>
+            function factorial(n){
+                var f=1;
+                for(var i=1;i<=n;i=i+1){
+                    f=f*i;
+                }
+                document.write("Factorial of "+n+" is "+f);
+            }
+            var n=parseInt(prompt("Enter a number"));
+            factorial(n);
+        </script>
+    </body>
+ </html>
