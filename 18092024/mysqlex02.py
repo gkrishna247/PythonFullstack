@@ -29,3 +29,4 @@ mydb.commit()
 print("Data inserted successfully")
 #closing the connection
 mydb.close()
+
