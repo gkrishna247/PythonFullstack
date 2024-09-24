@@ -21,14 +21,18 @@ def add_data():
     mydb.commit()
     print("Data inserted successfully")
 
-#function to read data from table
+#function to read data from table for particular empid
 def read_data():
     mycursor = mydb.cursor()
-    sql = "select * from emp_per"
-    mycursor.execute(sql)
-    result = mycursor.fetchall()
-    for row in result:
-        print(row)
+    sql = "select * from emp_per where empid = %s"
+    empid = input("Enter Empid: ")
+    mycursor.execute(sql, (empid,))
+    data = mycursor.fetchone()
+    print(f"Empid: {data[0]}")
+    print(f"Name: {data[1]}")
+    print(f"Position: {data[2]}")
+    print(f"Department: {data[3]}")
+    
 
 #function to update data in table
 def update_data():
@@ -73,14 +77,3 @@ while True:
 #closing the connection
 mydb.close()
 
-
-"""
-empid	int(11)	NO	PRI	NULL		
-name	varchar(50)	NO		NULL		
-pos	varchar(50)	NO		NULL		
-dept	varchar(50)	NO		NULL
-
-empid	int(11)	YES	MUL	NULL		
-salid	int(11)	NO	PRI	NULL		
-salary	int(11)	YES		NULL		
-joindate	date	YES		NULL		"""
