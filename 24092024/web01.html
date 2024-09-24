@@ -1,0 +1,26 @@
+<!-- Example program for oops in javascript-->
+ <html>
+    <head>
+        <title>Object Oriented Programming in JavaScript</title>
+    </head>
+    <body>
+        <script>
+            // Define a class
+            function Person(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            // Create an object of the class
+            var person1 = new Person("John", 25);
+            var person2 = new Person("Alice", 32);
+
+            // Access the properties of the object
+            document.write("Name: " + person1.name + "<br>");
+            document.write("Age: " + person1.age + "<br>");
+
+            document.write("Name: " + person2.name + "<br>");
+            document.write("Age: " + person2.age + "<br>");
+        </script>
+    </body>
+</html>
