@@ -12,13 +12,12 @@ mydb = mysql.connector.connect(
 #function to add data to table
 def add_data():
     mycursor = mydb.cursor()
-    sql = "insert into emp_per (empid, name, pos, dept, salid) values (%s, %s, %s, %s, %s)"
+    sql = "insert into emp_per (empid, name, pos, dept) values (%s, %s, %s, %s)"
     empid = input("Enter Empid: ")
     name = input("Enter Name: ")
     pos = input("Enter Position: ")
     dept = input("Enter Department: ")
-    salid = input("Enter Salary ID: ")
-    mycursor.execute(sql, (empid, name, pos, dept, salid))
+    mycursor.execute(sql, (empid, name, pos, dept))
     mydb.commit()
     print("Data inserted successfully")
 
@@ -34,10 +33,10 @@ def read_data():
 #function to update data in table
 def update_data():
     mycursor = mydb.cursor()
-    sql = "update emp_per set name = %s where empid = %s"
-    name = input("Enter Name: ")
+    sql = "update emp_per set pos = %s where empid = %s"
     empid = input("Enter Empid: ")
-    mycursor.execute(sql, (name, empid))
+    pos = input("Enter Position: ")
+    mycursor.execute(sql, (pos, empid))
     mydb.commit()
     print("Data updated successfully")
 
@@ -54,7 +53,7 @@ def delete_data():
 while True:
     print("1. Add Data")
     print("2. Read Data")
-    print("3. Update Data")
+    print("3. Update Emp Position")
     print("4. Delete Data")
     print("5. Exit")
     ch = input("Enter your choice: ")
@@ -79,8 +78,7 @@ mydb.close()
 empid	int(11)	NO	PRI	NULL		
 name	varchar(50)	NO		NULL		
 pos	varchar(50)	NO		NULL		
-dept	varchar(50)	NO		NULL		
-salid	int(11)	YES	MUL	NULL
+dept	varchar(50)	NO		NULL
 
 empid	int(11)	YES	MUL	NULL		
 salid	int(11)	NO	PRI	NULL		
