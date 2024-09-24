@@ -32,7 +32,6 @@ def read_data():
     print(f"Name: {data[1]}")
     print(f"Position: {data[2]}")
     print(f"Department: {data[3]}")
-    
 
 #function to update data in table 
 def update_data():

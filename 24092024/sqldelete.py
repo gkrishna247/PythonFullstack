@@ -14,3 +14,4 @@ sql = "delete from emp_per where empid = %s"
 cursor.execute(sql, (id,))
 mydb.commit()
 print("Data deleted successfully")
+
