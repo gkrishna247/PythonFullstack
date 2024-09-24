@@ -34,7 +34,7 @@ def read_data():
     print(f"Department: {data[3]}")
     
 
-#function to update data in table
+#function to update data in table 
 def update_data():
     mycursor = mydb.cursor()
     sql = "update emp_per set pos = %s where empid = %s"
