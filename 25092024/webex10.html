@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <script>
+            const num = [];
+            var x=0;
+            for (var i = 0; i < 5; i++) {
+                num[i]=prompt("Enter a number: ");
+            }
+            document.write("The numbers are: ");
+            for (var i = 0; i < 5; i++) {
+                document.write(num[i] + " ");
+            }
+            for(i=0;i<5;i++){
+                x=x+parseInt(num[i]);
+            }
+            document.write("<br>The sum of the numbers is: "+x);
+
+
+        </script>
+    </body>
+</html>
