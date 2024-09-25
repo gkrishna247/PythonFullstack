@@ -1,0 +1,13 @@
+<html>
+    <body>
+        Enter your Name:<input type="text" id="name" onkeyup="onkeyupcall()">
+        <p id="demo"></p>
+        <script>
+            function onkeyupcall(){
+                var x = document.getElementById('name').value;
+                document.getElementById('demo').innerHTML = x;
+            }
+        </script>
+    </body>
+</html>
+

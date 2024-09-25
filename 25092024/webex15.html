@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <script>
+        function add() {
+            var a = parseFloat(prompt("Value a: ")); // Convert input to float for numerical addition
+            var b = parseFloat(prompt("Value b: "));
+            var c = a + b;
+            document.getElementById('pid').innerText = "Addition result: " + c; // Display result
+        }
+
+        function fact() {
+            var f = parseInt(prompt("Enter a value: "), 10); // Convert input to integer
+            var p = 1;
+            for (var i = 1; i <= f; i++) { // Corrected loop to calculate factorial
+                p = p * i;
+            }
+            document.getElementById('pid').innerText = "Factorial result: " + p; // Display result
+        }
+    </script>
+
+    <button onclick="add()">Add</button> <!-- Added button text -->
+    <button onclick="fact()">Factorial</button> <!-- Added button text -->
+    <p id="pid"></p>
+</body>
+</html>
