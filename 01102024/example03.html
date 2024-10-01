@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <input type="text" id="inputA">
+        <input type="text" id="inputB">
+        <button onclick="calculate()">Calculate</button>
+        <p id="demo"></p>
+        <script>
+            function calculate() {
+                let myFunction = (a, b) => a * b;
+                var c = parseInt(document.getElementById("inputA").value);
+                var d = parseInt(document.getElementById("inputB").value);
+                document.getElementById("demo").innerHTML = myFunction(c, d);
+            }
+        </script>
+    </body>
+</html>
