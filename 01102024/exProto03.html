@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <script>
+            let animal={eat:true}
+            let rabbit={jumps:true,__proto__:animal};
+            alert(Object.keys(rabbit));
+            for (let prop in rabbit){
+                alert(prop);
+            }
+        </script>
+    </body>
+</html>
