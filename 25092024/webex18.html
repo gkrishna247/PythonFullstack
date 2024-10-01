@@ -1,0 +1,16 @@
+<!-- text box which raises alert if number of characters more than 4-->
+ <html>
+    <body>
+        Enter your Name:<input type="text" id="name" onkeyup="onkeyupcall()">
+        <p id="demo"></p>
+        <script>
+            function onkeyupcall(){
+                var x = document.getElementById('name').value;
+                if(x.length > 4){
+                    alert("Name should not exceed 4 characters");
+                }
+                document.getElementById('demo').innerHTML = x;
+            }
+        </script>
+    </body>
+ </html>
