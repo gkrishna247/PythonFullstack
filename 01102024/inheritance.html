@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <script>
+            class Button {
+                constructor(value) {
+                    this.value = value;
+                }
+                
+                click=()=>{
+                    var a=parseInt(prompt("Value a: "));
+                    var b=parseInt(prompt("Value b: "));
+                    var c=a+b;
+                    document.write(c);
+                }
+            }
+            
+            let button = new Button("hai");
+            setTimeout(button.click(), 1000);
+        </script>
+    </body>
+</html>
