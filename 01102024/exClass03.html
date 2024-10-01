@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <script>
+            function Makeclass(x){
+                return class{
+                    sayhi(){
+                        alert(x);
+                    }
+                };
+            }
+            let user= Makeclass("hai");
+            new user().sayhi();
+        </script>
+    </body>
+</html>
