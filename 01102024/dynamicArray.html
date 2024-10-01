@@ -2,11 +2,14 @@
 <html>
     <body>
         <script>
-            let arr=new Array(3)
-            arr[0]=10
-            arr[1]=15
-            arr[2]=22
-            alert(arr.length)
+            var r=parseInt(prompt("value"));
+            let arr=new Array(r);
+            for (i=0;i<r;i++){
+                arr[i]=parseInt(prompt("Value"));
+            }
+            for(i=0;i<r;i++){
+                document.write(arr[i]);
+            }
         </script>
     </body>
 </html>
