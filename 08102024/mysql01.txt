@@ -1,0 +1,64 @@
+create database Schooldb;
+show databases;
+use Schooldb;
+create table student_details ( s_name varchar(50), s_id int);
+create table student_marks (s_name varchar(50), marks int);
+create table student_city (s_name varchar(50), city varchar(50));
+
+desc student_details;
+insert into student_details values("Raj",1),("Raja",2),("Siva",3),("John",4),("Rohan",5);
+insert into student_marks values("Raj",98),("Raja",88),("Siva",77),("John",89),("Rohan",89);
+insert into student_city values("Raj","Salem"),("Raja","Tirupur"),("Siva","Tgode"),("John","Erode"),("Rohan","Salem");
+
+alter table student_details add (phone_no varchar(15));
+alter table student_marks add (s_rank int);
+alter table student_city add (pincode int);
+
+insert into student_details (phone_no) values ("9876543210");
+insert into student_marks (s_rank) values (1);
+insert into student_city (pincode) values (600001);
+
+select * from student_details;
+select * from student_marks;
+select * from student_city;
+
+desc student_details;
+
+insert into student_details (s_id,phone_no) values (6,"9876543216");
+
+alter table student_details modify column phone_no varchar(20);
+
+alter table student_details rename column phone_no to mobile_no;
+
+drop table student_details;
+
+select * from student_details; 
+
+delete from student_details where mobile_no="9876543210";
+delete from student_details where s_id=6;
+
+update student_details set mobile_no="9876543211" where s_id=1;
+update student_details set mobile_no="9876543212" where s_name="Raja";
+update student_details set mobile_no="9876543213" where s_id=3;
+update student_details set mobile_no="9876543214" where s_id=4;
+update student_details set mobile_no="9876543215" where s_id=5;
+
+delete from student_details where s_id=4;
+delete from student_details;
+
+
+show databases;
+commit;
+use schooldb;
+create table student_s1 (id int);
+commit;
+rollback;
+show tables;
+
+SET SQL_SAFE_UPDATES = 0;
+
+drop database schooldb;
+
+
+
+
