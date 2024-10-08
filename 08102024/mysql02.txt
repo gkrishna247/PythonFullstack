@@ -1,0 +1,47 @@
+create database empdb;
+
+use empdb;
+
+create table emp_details ( e_name varchar(50), e_id int,city varchar(50));
+create table emp_sal ( e_id int,pos varchar(50),sal int);
+
+insert into emp_details values("Raj",1,"Salem"),("Raja",2,"Chennai"),
+	("Siva",3,"Tgode"),("John",4,"Salem"),("Rohan",5,"Erode");
+insert into emp_sal values (1,"junior dev",30000), (2,"senior dev",50000), (3,"manager",50000),
+	(4,"assistant",10000), (5,"auditor",60000);
+    
+show tables;
+    
+alter table emp_sal rename emp_salary;
+alter table emp_details rename column city to e_city;
+
+alter table emp_details modify column e_id varchar(20);
+alter table emp_salary modify column pos varchar(20);
+
+select * from emp_details;
+
+SET SQL_SAFE_UPDATES = 0;
+update emp_details set e_city="Coimbatore" where e_city="Erode";
+
+select * from emp_details;
+
+insert into emp_details (e_id,e_name) values (6,"Ravi");
+insert into emp_details (e_id) values (7);
+
+select * from emp_details;
+
+update emp_details set e_city="Erode" where e_name="Ravi";
+update emp_details set e_name="Ragu",e_city="Tirchy" where e_id=7;
+
+select * from emp_details;
+
+delete from emp_details where e_id=5;
+
+select * from emp_details;
+
+create table demo (id int,ename varchar(50));
+insert into demo values (12,"suren"),(13,"Gova");
+
+drop table demo;
+
+commit;
