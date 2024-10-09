@@ -5,7 +5,7 @@ Response(Message): Error Code: 1451. Cannot delete or update a parent row: a for
 ---
 
 CREATE SCHEMA `product` ;
-# use works indirectly on the above comment
+# 'use' works indirectly on the above comment
 
 VARCHAR(45)
 
@@ -48,48 +48,4 @@ CREATE TABLE `product`.`stock_details` (
     REFERENCES `product`.`product_main` (`product_id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
