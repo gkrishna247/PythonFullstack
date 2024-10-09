@@ -17,6 +17,13 @@ select * from emp_details;
 create table HR_department (HR_id int primary key auto_increment,emp_id int,
 	emp_name varchar(50), emp_domain varchar(50),
     emp_role varchar(20), emp_sal int,
-    emp_phone varchar(15), emp_email varchar(20));
+    emp_phone varchar(15), emp_email varchar(20),
+    foreign key (emp_id) references emp_details(emp_id));
+    
+desc hr_department;
+insert into hr_department values(21,8,"Kumar","HR","HR Manager",60000,"9876543213","kumar001@gmail.com");
+
 commit;  
     
+drop table hr_department;
+set sql_safe_updates=0
