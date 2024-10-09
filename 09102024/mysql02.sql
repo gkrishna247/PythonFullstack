@@ -14,5 +14,9 @@ insert into emp_details (emp_name,emp_domain,emp_role,
     ("Selva","Finance","Auditor",80000,"9876543214","selva001@gmail.com");
 select * from emp_details;
 
-commit;
+create table HR_department (HR_id int primary key auto_increment,emp_id int,
+	emp_name varchar(50), emp_domain varchar(50),
+    emp_role varchar(20), emp_sal int,
+    emp_phone varchar(15), emp_email varchar(20));
+commit;  
     
