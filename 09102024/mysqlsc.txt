@@ -2,6 +2,67 @@ Action: delete from emp_details where emp_id=8
 
 Response(Message): Error Code: 1451. Cannot delete or update a parent row: a foreign key constraint fails (`employee`.`hr_department`, CONSTRAINT `hr_department_ibfk_1` FOREIGN KEY (`emp_id`) REFERENCES `emp_details` (`emp_id`))
 
+---
+
+CREATE SCHEMA `product` ;
+# use works indirectly on the above comment
+
+VARCHAR(45)
+
+CREATE TABLE `product`.`new_table` (
+  `name` VARCHAR(45) NULL,
+  `id` INT NULL);
+
+ALTER TABLE `product`.`main` 
+ADD COLUMN `product_type` VARCHAR(45) NULL AFTER `product_id`,
+CHANGE COLUMN `name` `product_name` VARCHAR(45) NULL DEFAULT NULL ,
+CHANGE COLUMN `id` `product_id` INT NULL DEFAULT NULL , RENAME TO  `product`.`product_main` ;
+
+ALTER TABLE `product`.`product_main` 
+CHANGE COLUMN `product_id` `product_id` INT NOT NULL ,
+ADD PRIMARY KEY (`product_id`);
+;
+
+ALTER TABLE `product`.`product_main` 
+CHANGE COLUMN `product_id` `product_id` INT NOT NULL FIRST;
+
+
+ALTER TABLE `product`.`product_main` 
+ADD COLUMN `product_count` INT NULL AFTER `product_type`;
+
+
+UPDATE `product`.`product_main` SET `product_count` = '10' WHERE (`product_id` = '21');
+INSERT INTO `product`.`product_main` (`product_id`, `product_name`, `product_type`, `product_count`) VALUES ('22', 'screen gaurd', 'elec', '200');
+INSERT INTO `product`.`product_main` (`product_id`, `product_name`, `product_type`, `product_count`) VALUES ('23', 'pen 03', 'sch', '40');
+
+CREATE TABLE `product`.`stock_details` (
+  `stock_id` INT NOT NULL,
+  `total` INT NULL,
+  `sold` INT NULL,
+  `unsold` INT NULL,
+  `product_id` INT NULL,
+  PRIMARY KEY (`stock_id`),
+  INDEX `product_id_idx` (`product_id` ASC) VISIBLE,
+  CONSTRAINT `product_id`
+    FOREIGN KEY (`product_id`)
+    REFERENCES `product`.`product_main` (`product_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
