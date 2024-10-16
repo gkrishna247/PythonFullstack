@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Task Management</title>
+</head>
+<body>
+
+    <h1>Task Management</h1>
+    <a href="index.html">Go Back to Dashboard</a>
+
+    <!-- Task List Section -->
+    <h2>Task List</h2>
+    <ul>
+        <li>
+            Task 1: Design website - <b>Status:</b> In-progress - <b>Priority:</b> High
+            <button>Edit</button>
+            <button>Delete</button>
+        </li>
+        <li>
+            Task 2: Finalize funding strategy - <b>Status:</b> Pending - <b>Priority:</b> Medium
+            <button>Edit</button>
+            <button>Delete</button>
+        </li>
+        <li>
+            Task 3: Hire new developer - <b>Status:</b> Completed - <b>Priority:</b> Low
+            <button>Edit</button>
+            <button>Delete</button>
+        </li>
+    </ul>
+
+    <!-- Form to Add New Task -->
+    <h2>Add New Task</h2>
+    <form>
+        <label for="task">New Task:</label>
+        <input type="text" id="task" name="task" placeholder="Enter task description" required><br><br>
+
+        <label for="deadline">Deadline:</label>
+        <input type="date" id="deadline" name="deadline" required><br><br>
+
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+            <option value="Pending">Pending</option>
+            <option value="In-progress">In-progress</option>
+            <option value="Completed">Completed</option>
+        </select><br><br>
+
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select><br><br>
+
+        <input type="submit" value="Add Task">
+    </form>
+
+    <!-- Note: Below is just the structure to handle editing tasks in future versions -->
+    <h2>Edit Task (Future Implementation)</h2>
+    <form>
+        <label for="edit_task">Edit Task:</label>
+        <input type="text" id="edit_task" name="edit_task" placeholder="Edit task description"><br><br>
+
+        <label for="edit_deadline">Edit Deadline:</label>
+        <input type="date" id="edit_deadline" name="edit_deadline"><br><br>
+
+        <label for="edit_status">Edit Status:</label>
+        <select id="edit_status" name="edit_status">
+            <option value="Pending">Pending</option>
+            <option value="In-progress">In-progress</option>
+            <option value="Completed">Completed</option>
+        </select><br><br>
+
+        <label for="edit_priority">Edit Priority:</label>
+        <select id="edit_priority" name="edit_priority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select><br><br>
+
+        <input type="submit" value="Update Task">
+    </form>
+
+</body>
+</html>
