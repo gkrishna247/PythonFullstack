@@ -11,7 +11,7 @@
                 <a href="index.html"></a>
             </td>
             <td align="center" colspan="2">
-                <font size="6" face="Georgia" color="#FFFFFF"><b>Startup Management Dashboard</b></font>
+                <font size="6" face="Georgia" color="#FFFFFF"><b>Task Management Dashboard</b></font>
             </td>
         </tr>
     </table>
@@ -34,11 +34,44 @@
                 </ul>
             </td>
             <td align="left" width="75%" valign="top" style="padding-left: 10px;">
-                <p><font size="4" face="Georgia" color="#000000">Welcome to your personal dashboard. Here you can manage your startup tasks, view important metrics, and access resources to help you grow your business.</font></p>
-                <p><font size="4" face="Georgia" color="#000000">Hello, Lalith! We're glad to have you back.</font></p>
-                <font size="4" face="Georgia" color="#2E8B57"><b>Latest Updates</b></font>
-                <p><font size="4" face="Georgia" color="#000000">Stay tuned for upcoming events and important announcements regarding your startup.</font></p>
-                <br>
+                <table align="center" border="1" cellpadding="10" cellspacing="0" width="100%">
+                    <tr>
+                        <th>Task</th>
+                        <th>Status</th>
+                        <th>Priority</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr>
+                        <td>Design website</td>
+                        <td>In-progress</td>
+                        <td>High</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Finalize funding strategy</td>
+                        <td>Pending</td>
+                        <td>Medium</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hire new developer</td>
+                        <td>Completed</td>
+                        <td>Low</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                </table>
+                <div style="text-align: center; margin-top: 10px;">
+                    <button onclick="window.location.href='add_task.html';">Add Task</button>
+                </div>
             </td>
         </tr>
     </table>
