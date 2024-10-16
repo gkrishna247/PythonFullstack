@@ -4,15 +4,17 @@
     <title>Startup Management Dashboard</title>
 </head>
 <body bgcolor="#E6E6FA">
-    <!-- create header-->
-    <table width="100%" border="0" cellpadding="10" cellspacing="0">
+     <!-- create header-->
+     <table width="100%" border="0" cellpadding="10" cellspacing="0">
         <tr bgcolor="#2E8B57">
-            <td align="center" colspan="3">
+            <td align="left">
+                <a href="index.html"><font size="5" face="Georgia" color="#FFFFFF"><b>Home</b></font></a>
+            </td>
+            <td align="center" colspan="2">
                 <font size="6" face="Georgia" color="#FFFFFF"><b>Startup Management Dashboard</b></font>
             </td>
         </tr>
     </table>
-    <!-- create overview table-->
     <table align="center" border="0" cellpadding="10" cellspacing="0" width="80%">
         <tr>
             <td align="center">
@@ -31,13 +33,14 @@
                             <form action="" method="post">
                                 <div>
                                     <label for="username">Username</label><br>
-                                    <input type="text" id="username" name="username" required><br><br>
+                                    <input type="text" id="username" name="username" ><br><br>
                                 </div>
                                 <div>
                                     <label for="password">Password</label><br>
-                                    <input type="password" id="password" name="password" required><br><br>
+                                    <input type="password" id="password" name="password" ><br><br>
                                 </div>
-                                <input type="submit" value="Sign In">
+                                <!-- <input type="submit" value="Sign In"> -->
+                                <button> <a href="dashboard.html">Sign In</a> </button>
                             </form>
                         </td>
                     </tr>
