@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern Layout</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(6, 60px);
+            grid-template-rows: repeat(6, 60px);
+            gap: 5px;
+        }
+
+        .box {
+            width: 60px;
+            height: 60px;
+        }
+
+        .red {
+            background-color: #e57373;
+        }
+
+        .pink {
+            background-color: #f06292;
+        }
+
+        .violet {
+            background-color: #ba68c8;
+        }
+
+        .blue {
+            background-color: #008cff;
+        }
+
+        .yellow {
+            background-color: #ffb74d;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="box red"></div>
+        <div class="box violet"></div>
+        <div class="box red"></div>
+        <div class="box red"></div>
+        <div class="box blue"></div>
+        
+        <div class="box "></div>
+        <div class="box red"></div>
+        <div class="box yellow"></div>
+        
+        <div class="box "></div>
+        <div class="box "></div>
+        <div class="box yellow"></div>
+        
+        <div class="box "></div>
+        <div class="box violet"></div>
+        <div class="box yellow"></div>
+        <div class="box "></div>
+        <div class="box "></div>
+        <div class="box yellow"></div>
+        <div class="box "></div>
+        <div class="box yellow"></div>
+        
+        <div class="box blue"></div>
+        <div class="box violet"></div>
+        <div class="box red"></div>
+        
+        <div class="box red"></div>
+        <div class="box "></div>
+        <div class="box yellow"></div>
+        
+        <div class="box violet"></div>
+        <div class="box yellow"></div>
+        <div class="box yellow"></div>
+        <div class="box violet"></div>
+        <div class="box blue"></div>
+    </div>
+</body>
+</html>
