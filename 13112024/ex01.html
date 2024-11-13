@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Operations</title>
+</head>
+<body>
+    <h2>JavaScript Array Operations</h2>
+    <p>Open the console to see the results.</p>
+
+    <script>
+        // Function to create a multiplier
+        const numbers = [1, 2, 3, 4, 5];
+
+        function createMultiplier(multiplier) {
+            return function(num) {
+                return num * multiplier;
+            };
+        }
+
+        // Using the multiplier function
+        const doubleFunction = createMultiplier(2);
+        const doubled1 = numbers.map(doubleFunction);
+        console.log("Doubled using createMultiplier:", doubled1);
+
+        // Using map with an arrow function
+        const doubled2 = numbers.map(num => num * 2);
+        console.log("Doubled using map:", doubled2);
+
+        // Filtering even numbers
+        const even = numbers.filter(num => num % 2 === 0);
+        console.log("Even numbers:", even);
+
+        // Summing all numbers using reduce
+        const sum = numbers.reduce((acc, num) => acc + num, 0);
+        console.log("Sum of numbers:", sum);
+
+        // Calculating the average
+        const average = sum / numbers.length;
+        console.log("Average of numbers:", average);
+    </script>
+</body>
+</html>
