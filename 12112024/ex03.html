@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1 id="main">Welcome</h1>
+        <button id="changeBtn">Change Text</button>
+
+        <script>
+            let change = document.getElementById('main');
+            let button = document.getElementById('changeBtn');
+
+            button.addEventListener('click', function() {
+                change.innerHTML = "Hello";
+                change.style.color = "yellow";
+            });
+        </script>
+    </body>
+</html>
