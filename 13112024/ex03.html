@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Operations</title>
+</head>
+<body>
+    <h2>JavaScript Array Operations</h2>
+    <p>Open the console to see the results.</p>
+
+    <script>
+        // Step 1: Create an array with 5 elements, each below 50
+        const marks = [35, 45, 20, 30, 40];
+
+        console.log("Original marks (out of 50):", marks);
+
+        // Step 2: Use map to convert marks to a 100-point scale
+        const marksOutOf100 = marks.map(mark => (mark * 2));
+        console.log("Converted marks (out of 100):", marksOutOf100);
+
+        // Step 3: Use filter to display marks above 80
+        const marksAbove80 = marksOutOf100.filter(mark => mark > 80);
+        console.log("Marks above 80:", marksAbove80);
+
+        // Step 4: Use reduce to find the total of the marks
+        const totalMarks = marksOutOf100.reduce((acc, mark) => acc + mark, 0);
+        console.log("Total marks:", totalMarks);
+
+        // Calculate the average
+        const averageMarks = totalMarks / marksOutOf100.length;
+        console.log("Average marks:", averageMarks.toFixed(2));
+    </script>
+</body>
+</html>
