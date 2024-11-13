@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Operations</title>
+</head>
+<body>
+    <h2>JavaScript Array Operations</h2>
+    <p>Open the console to see the results.</p>
+
+    <script>
+        // Function to create a multiplier
+        const marks = [34, 47, 41, 49, 39];
+        console.log("Original marks:", marks);
+
+        // Using map with an arrow function
+        const marks100 = marks.map(num => num * 2);
+        console.log("Marks out of 100:", marks100);
+
+        // Filtering mark greater than 80
+        const marks80 = marks100.filter(num => num > 80);
+        console.log("Marks greater than 80:", marks80);
+
+        // Find Sum and Average of all marks using reduce
+        const sum = marks.reduce((acc, num) => acc + num, 0);
+        console.log("Sum of all marks:", sum);
+
+        const avg = sum / marks.length;
+        console.log("Average of all marks:", avg);
+
+    </script>
+</body>
+</html>
